@@ -1,0 +1,44 @@
+.vkdl-btn {
+  position: relative;
+  z-index: 5;
+  pointer-events: auto;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--vkui--color_icon_secondary, #99a2ad);
+  cursor: pointer;
+  opacity: 0.75;
+  vertical-align: middle;
+  transition: opacity 0.15s, background-color 0.15s, color 0.15s;
+}
+.vkdl-btn:hover {
+  opacity: 1;
+  color: var(--vkui--color_icon_accent, #4986cc);
+  background: rgba(127, 127, 127, 0.18);
+}
+.vkdl-btn[data-state="done"] { color: #4bb34b; opacity: 1; }
+.vkdl-btn[data-state="error"] { color: #e64646; opacity: 1; }
+.vkdl-btn[data-state="loading"] { cursor: progress; opacity: 1; }
+
+.vkdl-ring {
+  position: absolute;
+  inset: 1px;
+  border-radius: 50%;
+  background: conic-gradient(var(--vkui--color_icon_accent, #4986cc) calc(var(--p) * 1%), rgba(127, 127, 127, 0.3) 0);
+  -webkit-mask: radial-gradient(circle, transparent 8px, #000 9px);
+  mask: radial-gradient(circle, transparent 8px, #000 9px);
+}
+.vkdl-pct {
+  font: 600 8px/1 -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--vkui--color_text_secondary, #909499);
+}
+
+.vkdl-legacy { margin: 0 4px; width: 26px; height: 26px; }
